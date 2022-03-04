@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="vieeport" content="eidth=device-eidth, initial-scale=1.0">
+    <title>Programming Language</title>
+    <style>
+        body {
+            background-color:rgba(190, 252, 228, 0.767);
+        }
+        * { 
+            list-style:none;
+            margin:0px;
+            padding:0px;
+        }
+        .parent {
+            padding: 0;
+            width: 200px;
+            height: 80px;
+            margin: 10px auto;
+            background-color: #9e9e9e00;
+            display: grid;
+            align-content: center;
+            border-radius: 20px;
+        }
+        .parent ul {
+            display:flex;
+            justify-content: space-evenly;
+            flex-wrap: nowrap;
+        }
+        .parent ul li {
+            width: 30px;
+            height: 30px;
+            opacity: 0.2;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .parent ul .active {
+            opacity:1;
+        }
+        .parent ul li:nth-child(1) {
+            background-color:green;
+        }
+        .parent ul li:nth-child(2) {
+            background-color:red;
+        }
+        .parent ul li:nth-child(3) {
+            background-color:black;
+        }
+        .parent ul li:nth-child(4){
+            background-color:blue;
+        }
+        .parent ul li:hover {
+            opacity:1;
+        }
+        .box {
+            width:400px;
+            height:100px;
+            background-color:green;
+            margin:10px auto;
+            position:relative;
+            border-radius:10px;
+        }
+        .box::after {
+            content:"";
+            position:absolute;
+            width:20px;
+            height:20px;
+            bottom:-50%;
+            left:50%;
+            background-color:inherit;
+            border-radius:50%;
+        }
+        .box::before {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 1.5px;
+            bottom: -41%;
+            left: 50%;
+            transform: translateX(-41%);
+            background-color:inherit;
+            border-radius:50%;
+        }
+    </style>
+    
+    <!-- css file  -->
+    <link rel="stylesheet" href="master.css">
+    
+
+</head>
+<body>
+    <div class="parent">
+        <ul>
+            <li class="active" data-color="green"></li>
+            <li data-color="red"></li>
+            <li data-color="black"></li>
+            <li data-color="blue"></li>
+        </ul>
+    </div>
+    <div class="box">
+
+    </div>
+    
+</body>
+<script src="main.js"></script>
+</html>
